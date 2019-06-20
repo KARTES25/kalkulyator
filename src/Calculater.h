@@ -17,6 +17,13 @@ public:
     ~MainWindow();
 
 private slots:
+    void onResetButtonClick();
+
 private:
+    Ui::MainWindow *ui;
+    double left = 0;
+    bool isCalced = false;
+    bool isLeft = true;
+    QString action;
 };
 #endif
