@@ -19,7 +19,7 @@ public:
 private slots:
     void onResetButtonClick();
     void onCalcButtonClick();
-
+    void onNumButtonClick();
 
 private:
     Ui::MainWindow *ui;
