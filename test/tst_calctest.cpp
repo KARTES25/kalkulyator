@@ -16,7 +16,7 @@ private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
     void shouldAdd();
-
+    void shouldSub();
 private:
     MainWindow* window;
     Ui::MainWindow* ui;
@@ -44,6 +44,16 @@ void CalcTest::shouldAdd()
     ui->calcButton->click();
     QVERIFY2(ui->output->text() == "8", "Failure");
 }
+
+void CalcTest::shouldSub()
+{
+    ui->numButton8->click();
+    ui->actionButtonSub->click();
+    ui->numButton2->click();
+    ui->calcButton->click();
+    QVERIFY2(ui->output->text() == "6", "Failure");
+}
+
 
 QTEST_MAIN(CalcTest)
 
